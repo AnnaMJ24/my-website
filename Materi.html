@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Segiempat dan Segitiga - Kelas 7 SMP</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f0f8ff;
+        }
+        .materi-header {
+            background-color: #686767;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .card {
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .tab-content {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-top: none;
+            padding: 20px;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        th {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center; /* Menempatkan teks judul di tengah secara horizontal */
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left; /* Menempatkan teks data di kiri */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="Beranda.html">Miftahul Jannah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Materi.html">Materi</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media Pembelajaran</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbar-Dropdown">
+                            <li><a class="dropdown-item" href="VideoPembelajaran.html">Video Pembelajaran</a></li>
+                            <li><a class="dropdown-item" href="LembarKerja.html">Lembar Kerja</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Quis Interaktif</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbar-Dropdown">
+                            <li><a class="dropdown-item" href="kuis.html">Kuis</a></li>
+                            <li><a class="dropdown-item" href="gamematch.html">Game Match</a></li>
+                            <li><a class="dropdown-item" href="memorygame.html">Memori Game</a></li>
+                            <li><a class="dropdown-item" href="tebakcepat.html">Tebak Cepat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Materi -->
+    <section class="materi-header">
+        <div class="container">
+            <h1>Materi Segiempat dan Segitiga</h1>
+            <p class="lead">Pelajari berbagai jenis segiempat dan segitiga dengan penjelasan lengkap.</p>
+        </div>
+    </section>
+
+    <!-- Materi Section dengan Tab -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Tab Navigasi -->
+            <ul class="nav nav-tabs mb-3" id="bangunDatarTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="SEGIEMPAT-tab" data-bs-toggle="tab" data-bs-target="#SEGIEMPAT" type="button" role="tab" aria-controls="SEGIEMPAT" aria-selected="true">SEGIEMPAT</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="SEGITIGA-tab" data-bs-toggle="tab" data-bs-target="#SEGITIGA" type="button" role="tab" aria-controls="SEGITIGA" aria-selected="false">SEGITIGA</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="CONTOH-SOAL-tab" data-bs-toggle="tab" data-bs-target="#CONTOH-SOAL" type="button" role="tab" aria-controls="CONTOH-SOAL" aria-selected="false">CONTOH SOAL</button>
+                </li>
+            </ul>
+
+            <!-- Isi Materi (Tab Content) -->
+            <div class="tab-content" id="bangunDatarContent">
+
+                <!-- Materi Segiempat -->
+                <div class="tab-pane fade show active" id="SEGIEMPAT" role="tabpanel" aria-labelledby="SEGIEMPAT-tab">
+                    <h3>A. Segiempat</h3>
+                    <p>Segiempat adalah bangun datar yang memiliki empat sisi. Jenis-jenis segiempat antara lain:</p>
+                    <h4>1. Persegi Panjang</h4>
+                    <img src="images/Persegi Panjang.png" alt="Gambar persegi panjang" width="200" style="display: block; margin: 0 auto;">
+                    <p>Unsur-unsur persegi panjang</p>
+                    <ul>
+                        <li>Sisi-sisi persegi panjang, yaitu: AB, BC, CD, AD.</li>
+                        <li>Titik sudut persegi panjang, yaitu: A, B, C, D.</li> 
+                        <li>Sudut-sudut persegi panjang, yaitu: DAB, ABC, BCD, dan CDA.</li>
+                        <li>Diagonal, yaitu: AC dan BD.</li>
+                    </ul>
+                    <p>Sifat-sifat persegi panjang</p>
+                    <ul>
+                        <li>Sisi-sisi yang berhadapan sejajar dan sama panjang.</li>
+                        <li>Keempat sudutnya siku-siku dan sama besar.</li>
+                        <li>Kedua diagonalnya sama panjang dan saling berpotongan membagi dua sama panjang.</li>
+                        <li>Memiliki 2 simetri lipat.</li>
+                        <li>Memiliki 2 simetri putar.</li>
+                        <li>Dapat menempati bingkai dengan 4 cara.</li>
+                    </ul>
+                    <p>Rumus Keliling dan luas persegi panjang</p>
+                    <ul>
+                        <li>Keliling = 2(p + l)</li> 
+                        <li>Luas = p x l</li>
+                    </ul>
+
+                    <h4>2. Persegi</h4>
+                    <img src="images/persegi.png" alt="Gambar persegi" width="200" style="display: block; margin: 0 auto;">
+                    <p>Unsur-unsur persegi</p>
+                    <ul> 
+                        <li>Sisi-sisi persegi, yaitu: AB, BC, CD, AD.</li>
+                        <li>Titik sudut persegi, yaitu: A, B, C, D.</li>
+                        <li>Sudut-sudut persegi, yaitu: DAB, ABC, BCD, dan CDA.</li>
+                        <li>Diagonal, yaitu: AC dan BD.</li>
+                    </ul>
+                    <p>Sifat-sifat persegi</p>
+                    <ul>
+                        <li>Keempat sisinya sama panjang.</li>
+                        <li>Sisi-sisinya yang berhadapan sejajar.</li>
+                        <li>Keempat sudutnya siku-siku dan sama besar.</li>
+                        <li>Kedua diagonalnya sama panjang dan saling berpotongan membagi dua sama panjang.</li>
+                        <li>Kedua diagonalnya berpotongan tegak lurus.</li>
+                        <li>Mempunyai 4 simetri lipat.</li>
+                        <li>Mempunyai 4 simetri putar.</li>
+                        <li>Dapat menempat bingkainya dengan 8 cara.</li>
+                    </ul>
+                    <p>Rumus Keliling dan luas persegi</p>
+                    <ul>
+                        <li>Keliling = 4s</li>
+                        <li>Luas = s x s = s²</li>
+                    </ul>
+
+                    <h4>3. Trapesium</h4>
+                    <p>Jenis-jenis trapesium</p>
+                    <ul>
+                        <img src="images/Trapesium1.png" alt="Trapesium Siku-siku" width="200" style="display: block; margin: 0 auto;">
+                        <li>Trapesium siku-siku adalah trapesium yang memiliki sepasang sudut siku-siku.<br>
+                            AB // CD, sudut DAB dan sudut ADC = 90 derajat.
+                        </li>
+                        <img src="images/Trapesium2.png" alt="Trapesium Sama Kaki" width="200" style="display: block; margin: 0 auto;">
+                        <li>Trapesium sama kaki adalah trapesium yang kaki-kakinya sama panjang.<br>
+                            EF // GH, EH = FG
+                        </li>
+                        <img src="images/Trapesium3.png" alt="Trapesium Sebarang" width="200" style="display: block; margin: 0 auto;">
+                        <li>Trapesium sebarang adalah trapesium yang sudutnya tidak siku-siku dan kaki-kakinya tidak sama panjang.<br>
+                            IJ // KL
+                        </li>
+                    </ul>
+                    <p>Sifat-sifat trapesium</p>
+                    <img src="images/Trapesium4.png" alt="Gambar Trapesium" width="200" style="display: block; margin: 0 auto;">
+                    <ul>
+                        <li>Mempunyai sepasang sisi berhadapan yang sejajar (AB // CD).</li>
+                        <li>Jumlah ukuran sudut-sudut yang berdekatan di antara dua sisi sejajar pada trapesium besarnya 180 derajat.</li>
+                        <li>Sudut BAD dan sudut ADC = 180 derajat.</li>
+                        <li>Sudut ABC dan sudut BCD = 180 derajat.</li>
+                    </ul>
+                    <p>Sifat-sifat trapesium sama kaki</p>
+                    <img src="images/Trapesium5.png" alt="Gambar Trapesium" width="200" style="display: block; margin: 0 auto;">
+                    <ul>
+                        <li>Mempunyai dua sisi sama panjang, yaitu kaki-kaki trapesium (AD = BC).</li>
+                        <li>Mempunyai dua pasang sudut yang sama besar (BAD = ABC dan ADC = BCD).</li>
+                        <li>Mempunyai sepasang diagonal yang sama panjang (AC = BD).</li>
+                        <li>Mempunyai satu sumbu simetri.</li>
+                    </ul>
+                    <p>Rumus Keliling dan luas trapesium</p>
+                    <img src="images/Trapesium6.png" alt="Gambar Trapesium" width="200" style="display: block; margin: 0 auto;">
+                    <ul>
+                        <li>Keliling = a + b + c + d</li>
+                        <li>Luas = ½ × (a + b) × t</li>
+                    </ul>
+
+                    <h4>4. Jajargenjang</h4>
+                    <p>Sifat-sifat persegi</p>
+                    <img src="images/jajargenjang1.png" alt="Gambar jajargenjang" width="250" style="display: block; margin: 0 auto;">
+                    <ul>
+                    <li>Sisi-sisi yang berhadapan sama panjang dan sejajar.</li>
+                        AB = CD dan AB//CD<br>
+                        AD = BC dan AD//BC
+                    <li>Sudut-sudut yang berhadapan sama besar.</li>
+                        Sudut DAB = sudut BCD<br>
+                        Sudut BCD = sudut CDA
+                    <li>Jumlah besar sudut-sudut yang berdekatan adalah 180 derajat.</li>
+                        Sudut DAB + sudut ABC = 180 derajat<br>
+                        Sudut ABC + sudut BCD = 180 derajat<br>
+                        Sudut BCD + sudut CDA = 180 derajat<br>
+                        Sudut CDA + sudut DAB = 180 derajat<br>
+                    <li>Diagonal-diagonal saling membagi dua sama panjang.</li>
+                        Pada diagonal AC panjang AO = OC
+                        Pada diagonal BD panjang BO = OD</td>
+                    </ul>
+                    <p>Rumus Keliling dan luas persegi</p>
+                    <img src="images/jajargenjang2.png" alt="Gambar jajargenjang" width="200" style="display: block; margin: 0 auto;">
+                    <ul>
+                        <li>Keliling = 2a + 2b = 2(a + b)</li>
+                        <li>Luas = a x t</li>
+                    </ul>
+
+                    <h4>5. Belah Ketupat</h4>
+                    <p>Sifat-sifat belah ketupat</p>
+                    <img src="images/Belah ketupat1.png" alt="Gambar belah ketupat" width="200" style="display: block; margin: 0 auto;">
+                    <ul> 
+                    <li>Semua sisi sama panjang dan memiliki dua pasang sisi sejajar.</li>
+                        AB = BC = CD = AD<br>
+                        AB//CD dan BC//AD
+                    <li>Diagonal-diagonalnya merupakan sumbu simetri.</li>
+                    <li>Kedua diagonal saling tegak lurus dan membagi dua sama panjang.</li>
+                        AC ⊥ BD panjang AO = OC dan BO = OD
+                    <li>Sudut-sudut yang berhadapan sama besar dan dibagi dua sama besar oleh masing-masing diagonal.</li>
+                        Sudut ABC = sudut ADC dan sudut BCD = sudut BAD<br>
+                        Sudut ABD = sudut CBD<br>
+                        Sudut ADB = sudut CDB<br>
+                        Sudut BAC = sudut DAC<br>
+                        Sudut BCA = sudut DCA</td>
+                    </ul>
+                    <p>Rumus Keliling dan luas belah ketupat</p>
+                    <img src="images/Belah ketupat2.png" alt="Gambar Belah ketupat" width="200" style="display: block; margin: 0 auto;">
+                    <ul>
+                        <li>Keliling = 4a</li>
+                    <li>Luas = ½ (d1 x d2) = d1 x d2/2</li>
+                    </ul>
+
+                    <h4>6. Layang-layang</h4>
+                    <p>Sifat-sifat layang-layang</p>
+                    <img src="images/Layanglayang.png" alt="Gambar Layang-layang" width="200" style="display: block; margin: 0 auto;">
+                    <ul>
+                    <li>Mempunyai dua pasang sisi sama panjang.</li>
+                        AB = BC dan AD = CD
+                    <li>Kedua diagonal saling berpotongan tegak lurus dan salah satu diagonalnya membagi dua sama panjang.</li>
+                        AC ⊥ BD<br>
+                        Sudut AOB = sudut BOC = sudut COD = sudut AOD = 90 derajat<br>
+                        AO = OC
+                    <li>Salah satu diagonalnya merupakan sumbu simetri, yaitu BD.</li>
+                    <li>Mempunyai sepasang sudut berhadapan yang sama besar.</li>
+                        Sudut BAD = sudut BCD</td>
+                    </ul>
+                    <p>Rumus Keliling dan luas layang-layang</p>
+                    <ul>
+                        <li>Keliling = 2(s1 + s2)</li>
+                        <li>Luas = ½ (d1 x d2) = d1 x d2/2</li>
+                    </ul>
+                </div>
+                
+                <!-- Materi Segitiga -->
+                 <div class="tab-pane fade" id="SEGITIGA" role="tabpanel" aria-labelledby="SEGITIGA-tab">
+                    <h3>B. Segitiga</h3>
+                    <h4>1. Jenis-jenis segitiga</h4>
+                    <ol type="a">
+                        <li>Segitiga berdasarkan panjang sisinya
+                            <ol type="i">
+                                <div class="container mt-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="images/segitiga sama kaki.png" class="img-fluid rounded" alt="sama kaki">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="images/segitiga sama sisi.png" class="img-fluid rounded" alt="sama sisi">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="images/segitga sebarang.png" class="img-fluid rounded" alt="sebarang">
+                                        </div>
+                                    </div>
+                                </div>
+                                <li><span class="bold">Segitiga Sama Kaki:</span> Segitiga yang memiliki dua sisi sama panjang.</li>
+                                <li><span class="bold">Segitiga Sama Sisi:</span> Segitiga yang memiliki tiga sisi sama panjang.</li>
+                                <li><span class="bold">Segitiga Sebarang:</span> Segitiga yang ketiga sisinya tidak sama panjang.</li>
+                            </ol>
+                        </li>
+                        <li>Segitiga berdasarkan besar sudutnya
+                            <ol type="i">
+                                <div class="container mt-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="images/segitiga siku-siku.png" class="img-fluid rounded" alt="siku-siku">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="images/segitiga tumpul.png" class="img-fluid rounded" alt="tumpul">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="images/segitiga lancip.png" class="img-fluid rounded" alt="lancip">
+                                        </div>
+                                    </div>
+                                </div>
+                                <li><span class="bold">Segitiga Siku-siku:</span> Segitiga yang salah satu sudutnya siku-siku.</li>
+                                <li><span class="bold">Segitiga Lancip:</span> Segitiga yang ketiga sudutnya lancip.</li>
+                                <li><span class="bold">Segitiga Tumpul:</span> Segitiga yang salah satu sudutnya tumpul.</li>
+                            </ol>
+                        </li>
+                    </ol>
+                    
+                    <h4>2. Sifat-sifat segitiga</h4>
+                    <ol type="a">
+                        <li>Sifat segitiga siku-siku
+                            <ol type="i">
+                                <li><span class="bold">Memiliki satu sudut siku-siku (90 derajat)</span></li>
+                                <li><span class="bold">Berlaku teorema Pytagoras :</span></li><i>"Kuadrat sisi miring segitiga siku-siku sama dengan jumlah kuadrat sisi siku-siku segitiga tersebut"</i>
+                            </ol>
+                        </li>
+                        <li>Sifat segitiga sama kaki 
+                            <ol type="i">
+                                <li><span class="bold">Mempunyai dua sisi sama panjang</span></li>
+                                <li><span class="bold">Mempunyai dua sudut yang sama besar</span></li>
+                                <li><span class="bold">Mempunyai satu sumbu simetri</span>.</li>
+                                <li><span class="bold">Dapat menempati bingkai secara tepat dengan 2 (dua) cara.</span></li>
+                            </ol>
+                        </li>
+                
+                        <li>Sifat segitiga sama sisi 
+                            <ol type="i">
+                                <li><span class="bold">Mempunyai tiga sisi sama panjang</span></li>
+                                <li><span class="bold">Mempunyai tiga sudut yang sama besar (60 derajat)</span></li>
+                                <li><span class="bold">Mempunyai tiga sumbu simetri</span>.</li>
+                                <li><span class="bold">Mempunyai tiga simetri putar</span>.</li>
+                                <li><span class="bold">Dapat menempati bingkai secara tepat dengan 6 (enam) cara.</span>.</li>
+                            </ol>
+                        </li>
+                
+                    <h4>3. Rumus keliling dan luas segitiga</h4>
+                    Rumus untuk menghitung luas dan keliling segitiga:
+                    <li><strong>Keliling:</strong> K = a + b + c (dimana a, b, dan c adalah panjang sisi segitiga)</li>
+                    <li><strong>Luas:</strong> L = ½ × alas × tinggi</li><br>
+                    Jika hanya diketahui panjang ketiga sisinya:
+                    <li><strong>Luas:</strong> L = √(s(s-a)(s-b)(s-c))</li>
+                </div>
+
+                <!-- Contoh Soal -->
+                <div class="tab-pane fade" id="CONTOH-SOAL" role="tabpanel" aria-labelledby="CONTOH-SOAL-tab">
+                    <h3>Contoh Soal</h3>
+                    <p>Berikut adalah beberapa contoh soal yang bisa membantu memahami materi segiempat dan segitiga:</p>
+                    <h4>Contoh Soal 1: Keliling dan Luas Persegi Panjang</h4>
+                    <p>Pak Roni memiliki sebidang lahan berbentuk persegi panjang dengan ukuran 20m x 10m. Tentukan keliling dan luas dari persegi panjang tersebut</p>
+                        <strong>Jawaban:</strong>
+                        <p>Keliling (K) persegi panjang :
+                            K = 2 (p + l) = 2 (20 + 10) = 2 x 30 = 60m
+                        </p>
+                        <p>Luas (L) persegi panjang: L = p × l = 20 × 10 = 200 m²</p>
+    
+                        <h4>Contoh Soal 2: Keliling dan Luas Persegi</h4>
+                        <p>Sebuah persegi memiliki panjang sisi 8 cm. Tentukan keliling dan luas dari persegi tersebut.</p>
+                        <strong>Jawaban:</strong>
+                        <p>Keliling (K) persegi: K = 4 × s = 4 × 8 = 32 cm</p>
+                        <p>Luas (L) persegi: L = s × s = 8 × 8 = 64 cm²</p>
+
+                        <h4>Contoh Soal 3: Keliling dan Luas Trapesium</h4>
+                        <p>Sebuah trapesium memiliki panjang sisi sejajar 12 cm dan 8 cm, dengan tinggi 6 cm. Tentukan keliling dan luas trapesium tersebut jika panjang sisi miringnya masing-masing adalah 5 cm dan 7 cm.</p>
+                        <strong>Jawaban:</strong>
+                        <p>Keliling (K) trapesium: K = 12 + 8 + 5 + 7 = 32 cm</p>
+                        <p>Luas (L) trapesium: L = ½ × (a + b) × t = ½ × (12 + 8) × 6 = 60 cm²</p>
+
+                        <h4>Contoh Soal 4: Keliling dan Luas Jajargenjang</h4>
+                        <p>Sebuah jajargenjang memiliki panjang alas 10 cm dan tinggi 8 cm. Jika panjang sisi miringnya adalah 12 cm, tentukan keliling dan luas jajargenjang tersebut.</p>
+                        <strong>Jawaban:</strong>
+                        <p>Keliling (K) jajargenjang: K = 2 × (a + s) = 2 × (10 + 12) = 44 cm</p>
+                        <p>Luas (L) jajargenjang: L = a × t = 10 × 8 = 80 cm²</p>
+
+                        <h4>Contoh Soal 5: Keliling dan Luas Belah Ketupat</h4>
+                        <p>Sebuah belah ketupat memiliki panjang diagonal 12 cm dan 16 cm. Tentukan keliling dan luas belah ketupat tersebut jika panjang sisi belah ketupatnya adalah 10 cm.</p>
+                        <strong>Jawaban:</strong>
+                        <p>Keliling (K) belah ketupat: K = 4 × s = 4 × 10 = 40 cm</p>
+                        <p>Luas (L) belah ketupat: L = ½ × d₁ × d₂ = ½ × 12 × 16 = 96 cm²</p>
+
+                        <h4>Contoh Soal 6: Keliling dan Luas Layang-layang</h4>
+                        <p>Sebuah layang-layang memiliki panjang diagonal 14 cm dan 10 cm. Tentukan keliling dan luas layang-layang tersebut jika panjang sisi-sisinya adalah 8 cm dan 6 cm.</p>
+                        <strong>Jawaban:</strong>
+                        <p>Keliling (K) layang-layang: K = 2 × (s₁ + s₂) = 2 × (8 + 6) = 28 cm</p>
+                        <p>Luas (L) layang-layang: L = ½ × d₁ × d₂ = ½ × 14 × 10 = 70 cm²</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

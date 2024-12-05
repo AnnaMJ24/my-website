@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Interaktif Matematika - Game Match</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f0f8ff; }
+        .quiz-header { background-color: #686767; color: white; padding: 30px 0; text-align: center; }
+        .match-game img { width: 100px; height: 100px; }
+        .match-container { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
+        .match-card { border: 2px solid #007bff; padding: 10px; border-radius: 10px; text-align: center; background-color: white; cursor: pointer; }
+        .selected { background-color: #c3e6cb; }
+        .bg-success { background-color: #28a745 !important; color: white !important; }
+        .correct { color: green; }
+        .incorrect { color: red; }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="Beranda.html">Miftahul Jannah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Materi.html">Materi</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media Pembelajaran</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbar-Dropdown">
+                            <li><a class="dropdown-item" href="VideoPembelajaran.html">Video Pembelajaran</a></li>
+                            <li><a class="dropdown-item" href="LembarKerja.html">Lembar Kerja</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Quis Interaktif</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbar-Dropdown">
+                            <li><a class="dropdown-item" href="kuis.html">Kuis</a></li>
+                            <li><a class="dropdown-item" href="gamematch.html">Game Match</a></li>
+                            <li><a class="dropdown-item" href="memorygame.html">Memori Game</a></li>
+                            <li><a class="dropdown-item" href="tebakcepat.html">Tebak Cepat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quiz Section -->
+    <div class="container my-5">
+        <div class="quiz-header">
+            <h2>Game Match: Cocokkan Bangun Datar</h2>
+        </div>
+
+        <!-- Game Match Bangun Datar -->
+        <div class="match-game text-center mt-4">
+            <p>Cocokkan gambar dengan nama bangun datar!</p>
+            <div class="match-container">
+                <!-- Gambar Bangun Datar -->
+                <div class="match-card" data-name="persegi"><img src="images/persegi quis.png" alt="Persegi"></div>
+                <div class="match-card" data-name="jajar genjang"><img src="images/jajar genjang quis.png" alt="Jajar Genjang"></div>
+                <div class="match-card" data-name="belah ketupat"><img src="images/belah ketupat quis.png" alt="Belah Ketupat"></div>
+
+                <!-- Nama Bangun Datar -->
+                <div class="match-card" data-name="jajar genjang">Jajar Genjang</div>
+                <div class="match-card" data-name="persegi">Persegi</div>
+                <div class="match-card" data-name="belah ketupat">Belah Ketupat</div>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result" class="result text-center mt-4"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Game Logic -->
+    <script>
+        let firstCard = null;
+        const cards = document.querySelectorAll('.match-card');
+        const resultDiv = document.getElementById('result');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                if (!firstCard) {
+                    firstCard = card;
+                    card.classList.add('selected');
+                } else {
+                    if (firstCard === card) return; // Hindari klik pada kartu yang sama
+
+                    // Periksa kecocokan (case-insensitive)
+                    if (firstCard.dataset.name.toLowerCase() === card.dataset.name.toLowerCase()) {
+                        firstCard.classList.add('bg-success', 'text-white');
+                        card.classList.add('bg-success', 'text-white');
+                        resultDiv.innerHTML = "<p class='correct'>Cocok! Bagus sekali!</p>";
+                        
+                        // Hapus event listener setelah kecocokan
+                        firstCard.removeEventListener('click', arguments.callee);
+                        card.removeEventListener('click', arguments.callee);
+                    } else {
+                        resultDiv.innerHTML = "<p class='incorrect'>Tidak cocok. Coba lagi!</p>";
+                        setTimeout(() => {
+                            firstCard.classList.remove('selected');
+                            card.classList.remove('selected');
+                        }, 500);
+                    }
+                    firstCard = null;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

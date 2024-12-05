@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKPD Segiempat dan Segitiga - Kelas 7 SMP</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?mathematics,geometry') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        table {
+            color: white;
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .correct {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .incorrect {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        /* Responsif untuk perangkat kecil */
+        @media (max-width: 767px) {
+            .container {
+                padding: 15px; /* Mengurangi padding di layar kecil */
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .form-control {
+                font-size: 14px; /* Ukuran input lebih kecil */
+            }
+
+            .btn-submit {
+                font-size: 16px; /* Ukuran tombol lebih kecil */
+            }
+
+            table {
+                font-size: 14px; /* Ukuran teks tabel lebih kecil */
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="Beranda.html">Miftahul Jannah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Materi.html">Materi</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media Pembelajaran</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbar-Dropdown">
+                            <li><a class="dropdown-item" href="VideoPembelajaran.html">Video Pembelajaran</a></li>
+                            <li><a class="dropdown-item" href="LembarKerja.html">Lembar Kerja</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Quis Interaktif</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbar-Dropdown">
+                            <li><a class="dropdown-item" href="kuis.html">Kuis</a></li>
+                            <li><a class="dropdown-item" href="gamematch.html">Game Match</a></li>
+                            <li><a class="dropdown-item" href="memorygame.html">Memori Game</a></li>
+                            <li><a class="dropdown-item" href="tebakcepat.html">Tebak Cepat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Konten -->
+    <div class="container">
+        <h1>Lembar Kerja Peserta Didik</h1>
+        <h2>Topik: Segiempat dan Segitiga</h2>
+
+        <!-- Tabel Soal -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Pertanyaan</th>
+                        <th>Jawaban Anda</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Sebuah jajargenjang memiliki panjang alas 12 cm, tinggi 8 cm, dan sisi miring 10 cm. Hitung kelilingnya!</td>
+                        <td><input type="text" class="form-control" placeholder="Jawaban Anda"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Berapa jumlah total sudut pada segitiga?</td>
+                        <td><input type="text" class="form-control" placeholder="Jawaban Anda"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Hitung luas persegi panjang dengan panjang 8 cm dan lebar 4 cm!</td>
+                        <td><input type="text" class="form-control" placeholder="Jawaban Anda"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Hitung luas sebuah segitiga dengan panjang alas 14 cm dan tinggi 10 cm!</td>
+                        <td><input type="text" class="form-control" placeholder="Jawaban Anda"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Hitung keliling sebuah trapesium dengan sisi-sisi 10 cm, 12 cm, 15 cm, dan 13 cm!</td>
+                        <td><input type="text" class="form-control" placeholder="Jawaban Anda"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tombol Kirim Jawaban -->
+        <button class="btn btn-success btn-submit" onclick="checkAnswers()">Kirim Jawaban</button>
+
+        <!-- Tempat menampilkan hasil -->
+        <div id="resultContainer"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Kunci Jawaban
+        const correctAnswers = ["44", "180", "32", "70", "50"];
+
+        // Fungsi untuk memeriksa jawaban
+        function checkAnswers() {
+            const inputs = document.querySelectorAll("input");
+            const resultContainer = document.getElementById("resultContainer");
+            resultContainer.innerHTML = ''; // Clear previous results
+
+            let correctCount = 0;
+            inputs.forEach((input, index) => {
+                const userAnswer = input.value.trim();
+                const correctAnswer = correctAnswers[index];
+                const isCorrect = userAnswer === correctAnswer;
+
+                // Tampilkan hasil untuk setiap soal
+                const result = document.createElement("p");
+                result.innerHTML = `Soal ${index + 1}: ${isCorrect ? "Benar ✅" : "Salah ❌"} <br>`;
+                if (!isCorrect) {
+                    result.innerHTML += `Jawaban benar: ${correctAnswer}`;
+                }
+                resultContainer.appendChild(result);
+
+                if (isCorrect) correctCount++;
+            });
+
+            // Tampilkan total jawaban benar
+            const summary = document.createElement("p");
+            summary.innerHTML = `<strong>Total Benar: ${correctCount} dari ${correctAnswers.length}</strong>`;
+            resultContainer.appendChild(summary);
+        }
+    </script>
+
+    <!-- Bootstrap JS Bundle (Popper.js + Bootstrap.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

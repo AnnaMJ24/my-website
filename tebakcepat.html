@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Cepat Bangun Datar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f8ff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .game-header {
+            background-color: #686767;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        #question {
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 200px;
+            height: auto;
+        }
+        #timer {
+            font-size: 1.5em;
+            color: #d9534f;
+            margin: 10px 0;
+        }
+        #result {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="Beranda.html">Miftahul Jannah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Materi.html">Materi</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media Pembelajaran</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbar-Dropdown">
+                            <li><a class="dropdown-item" href="VideoPembelajaran.html">Video Pembelajaran</a></li>
+                            <li><a class="dropdown-item" href="LembarKerja.html">Lembar Kerja</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Quis Interaktif</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbar-Dropdown">
+                            <li><a class="dropdown-item" href="kuis.html">Kuis</a></li>
+                            <li><a class="dropdown-item" href="gamematch.html">Game Match</a></li>
+                            <li><a class="dropdown-item" href="memorygame.html">Memori Game</a></li>
+                            <li><a class="dropdown-item" href="tebakcepat.html">Tebak Cepat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="game-header">
+        <h1>Tebak Cepat: Bangun Datar</h1>
+    </div>
+
+    <!-- Timer -->
+    <div id="timer">Waktu Tersisa: <span id="time-left">60</span> detik</div>
+
+    <!-- Game Container -->
+    <div class="container">
+        <div id="question" class="mb-4">
+            <div class="image-container mb-4">
+                <img id="shape-image" src="" alt="Bangun Datar">
+            </div>
+            <input type="text" id="answer" class="form-control" placeholder="Tebak nama bangun datar...">
+            <button class="btn btn-primary mt-3" onclick="checkAnswer()">Kirim Jawaban</button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Game Logic -->
+    <script>
+        const shapes = [
+            { name: "persegi", image: "https://i.pinimg.com/1200x/a9/ba/28/a9ba286958449755c65517e717c2271b.jpg"},
+            { name: "segitiga", image: "https://i.pinimg.com/1200x/cd/37/89/cd3789373bb43eebf3dd06627c523f97.jpg" },
+            { name: "belah ketupat", image: "https://i.pinimg.com/1200x/be/93/dd/be93ddd8ec1549db0f592c320c2b303a.jpg" },
+            { name: "persegi panjang", image: "https://i.pinimg.com/1200x/71/4c/b8/714cb808416eb37552750ba615e3aa6d.jpg" },
+            { name: "trapesium", image: "https://i.pinimg.com/1200x/7d/8b/93/7d8b93d3facec5994a9a27f6a55e7ba7.jpg" }
+        ];
+
+        let timeLeft = 60;
+        let currentShapeIndex = 0;
+
+        function loadShape() {
+            currentShapeIndex = Math.floor(Math.random() * shapes.length);
+            document.getElementById('shape-image').src = shapes[currentShapeIndex].image;
+        }
+
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value.trim().toLowerCase();
+            const correctAnswer = shapes[currentShapeIndex].name;
+
+            if (answer === correctAnswer) {
+                document.getElementById('result').innerHTML = "<p class='text-success'>Benar! 🎉</p>";
+            } else {
+                document.getElementById('result').innerHTML = "<p class='text-danger'>Salah! Jawaban benar adalah: " + correctAnswer + ".</p>";
+            }
+
+            setTimeout(() => {
+                document.getElementById('result').innerHTML = "";
+                document.getElementById('answer').value = "";
+                loadShape();
+            }, 2000);
+        }
+
+        // Timer logic
+        let timer = setInterval(function() {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                document.getElementById("result").innerHTML = "<p class='text-danger'>Waktu habis! Permainan selesai.</p>";
+                document.querySelector("button").disabled = true;
+            } else {
+                document.getElementById("time-left").innerText = timeLeft;
+                timeLeft--;
+            }
+        }, 1000);
+
+        // Load the first shape
+        loadShape();
+    </script>
+</body>
+</html>

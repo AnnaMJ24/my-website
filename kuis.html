@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Segiempat dan Segitiga - Kelas 7 SMP</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f0f8ff;
+        }
+
+        .quiz-header {
+            background-color: #686767;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .card {
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .question {
+            font-weight: bold;
+        }
+
+        .option {
+            margin-left: 20px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.2em;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+
+        /* Responsif untuk perangkat mobile */
+        @media (max-width: 767px) {
+            .quiz-header {
+                padding: 30px 0;
+            }
+
+            .card-body {
+                padding: 15px;
+            }
+
+            .question {
+                font-size: 1.1em;
+            }
+
+            .submit-btn {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            .option {
+                margin-left: 15px;
+                font-size: 1em;
+            }
+        }
+        .game-container {
+            margin-top: 20px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .hidden { display: none; }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="Beranda.html">Miftahul Jannah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Materi.html">Materi</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media Pembelajaran</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbar-Dropdown">
+                            <li><a class="dropdown-item" href="VideoPembelajaran.html">Video Pembelajaran</a></li>
+                            <li><a class="dropdown-item" href="LembarKerja.html">Lembar Kerja</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Quis Interaktif</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbar-Dropdown">
+                            <li><a class="dropdown-item" href="kuis.html">Kuis</a></li>
+                            <li><a class="dropdown-item" href="gamematch.html">Game Match</a></li>
+                            <li><a class="dropdown-item" href="memorygame.html">Memori Game</a></li>
+                            <li><a class="dropdown-item" href="tebakcepat.html">Tebak Cepat</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quiz Section -->
+    <div class="container my-5">
+
+        <div class="quiz-header">
+            <h2>Quiz: Bangun Datar - Segiempat dan Segitiga</h2>
+        </div>
+
+        <!-- Question 1: Segiempat -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <p class="question">1. Apa nama bangun datar yang memiliki empat sisi sama panjang dan empat sudut siku-siku?</p>
+                <div class="option">
+                    <input type="radio" name="question1" id="q1a1" value="persegi"><label for="q1a1">Persegi</label><br>
+                    <input type="radio" name="question1" id="q1a2" value="persegi panjang"><label for="q1a2">Persegi Panjang</label><br>
+                    <input type="radio" name="question1" id="q1a3" value="jajar genjang"><label for="q1a3">Jajar Genjang</label><br>
+                    <input type="radio" name="question1" id="q1a4" value="trapesium"><label for="q1a4">Trapesium</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 2: Segitiga -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <p class="question">2. Segitiga dengan sisi-sisi yang tidak ada yang sama panjang disebut?</p>
+                <div class="option">
+                    <input type="radio" name="question2" id="q2a1" value="sebarang"><label for="q2a1">Segitiga Sembarangan</label><br>
+                    <input type="radio" name="question2" id="q2a2" value="sama panjang"><label for="q2a2">Segitiga Sama Panjang</label><br>
+                    <input type="radio" name="question2" id="q2a3" value="siku-siku"><label for="q2a3">Segitiga Siku-siku</label><br>
+                    <input type="radio" name="question2" id="q2a4" value="sama besar"><label for="q2a4">Segitiga Sama Besar</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question 3: Luas Persegi Panjang -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <p class="question">3. Hitung luas dari sebuah persegi panjang dengan panjang 10 cm dan lebar 5 cm.</p>
+                <div class="option">
+                    <input type="radio" name="question3" id="q3a1" value="50"><label for="q3a1">50 cm²</label><br>
+                    <input type="radio" name="question3" id="q3a2" value="15"><label for="q3a2">15 cm²</label><br>
+                    <input type="radio" name="question3" id="q3a3" value="25"><label for="q3a3">25 cm²</label><br>
+                    <input type="radio" name="question3" id="q3a4" value="30"><label for="q3a4">30 cm²</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button class="submit-btn" type="button" onclick="checkAnswers()">Kirim Jawaban</button>
+        </div>
+
+        <!-- Result Section -->
+        <div id="result" class="result text-center"></div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript -->
+    <script>
+        function checkAnswers() {
+            // Get selected answers
+            var answer1 = document.querySelector('input[name="question1"]:checked');
+            var answer2 = document.querySelector('input[name="question2"]:checked');
+            var answer3 = document.querySelector('input[name="question3"]:checked');
+
+            // Check if all questions are answered
+            if (!answer1 || !answer2 || !answer3) {
+                alert("Harap menjawab semua pertanyaan!");
+                return;
+            }
+
+            // Correct answers
+            var correctAnswers = {
+                "question1": "persegi", // Correct answer for question 1
+                "question2": "sebarang", // Correct answer for question 2
+                "question3": "50" // Correct answer for question 3
+            };
+
+            var result = "";
+            var score = 0;
+
+            // Check answers
+            if (answer1.value === correctAnswers["question1"]) {
+                score++;
+                result += "<p class='correct'>Jawaban 1 benar!</p>";
+            } else {
+                result += "<p class='incorrect'>Jawaban 1 salah. Jawaban yang benar adalah Persegi.</p>";
+            }
+
+            if (answer2.value === correctAnswers["question2"]) {
+                score++;
+                result += "<p class='correct'>Jawaban 2 benar!</p>";
+            } else {
+                result += "<p class='incorrect'>Jawaban 2 salah. Jawaban yang benar adalah Segitiga Sembarangan.</p>";
+            }
+
+            if (answer3.value === correctAnswers["question3"]) {
+                score++;
+                result += "<p class='correct'>Jawaban 3 benar!</p>";
+            } else {
+                result += "<p class='incorrect'>Jawaban 3 salah. Jawaban yang benar adalah 50 cm².</p>";
+            }
+
+            // Display score
+            result += "<h3>Skor Anda: " + score + " dari 3</h3>";
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+
+</body>
+
+</html>
